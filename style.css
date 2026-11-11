@@ -31,3 +31,13 @@ dialog{background:var(--paper);color:var(--ink);border:1px solid #b0aa9d;border-
 .select-option[aria-selected=true].is-active,.select-option[aria-selected=true]:hover{background:#d3aa86}
 .select-option .icon{width:18px;height:18px}
 @media(forced-colors:active){.select-options{border:1px solid CanvasText}.select-option.is-active{outline:1px solid Highlight;outline-offset:-2px}.select-option[aria-selected=true]{border:1px solid Highlight}}
+
+/* A slightly wider view without changing the visitor's browser settings. */
+@media screen and (min-width:761px){body{zoom:.9}}
+@media screen and (max-width:760px){
+  .section-space{padding-block:58px}
+  .hero-photo{height:396px}
+  .detail-photo img{height:414px}
+  .hero-heading{padding-top:36px}
+  .booking-grid{gap:32px;margin-top:28px}
+}
