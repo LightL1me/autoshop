@@ -41,3 +41,9 @@ dialog{background:var(--paper);color:var(--ink);border:1px solid #b0aa9d;border-
   .hero-heading{padding-top:36px}
   .booking-grid{gap:32px;margin-top:28px}
 }
+
+/* Attribution stays beside each photograph at every screen size. */
+.hero-photo .photo-caption{max-width:42ch;font-size:14px;line-height:1.65}
+.photo-disclaimer{display:block;margin-top:7px;font-size:12px;line-height:1.65}
+.hero-photo .photo-disclaimer{color:#eeede7}
+.detail-photo .photo-disclaimer{color:#c2c3bb}
