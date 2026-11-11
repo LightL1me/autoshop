@@ -161,12 +161,14 @@ for (const select of [serviceSelect, sizeSelect]) {
   function close() {
     panel.hidden = true;
     trigger.setAttribute('aria-expanded', 'false');
+    wrap.classList.remove('is-open');
     render();
   }
   function open() {
     selectControls.forEach(control => control.close());
     panel.hidden = false;
     trigger.setAttribute('aria-expanded', 'true');
+    wrap.classList.add('is-open');
     active = select.selectedIndex;
     render();
   }
@@ -204,6 +206,7 @@ for (const select of [serviceSelect, sizeSelect]) {
     }
   });
   document.addEventListener('pointerdown', event => { if (!wrap.contains(event.target)) close(); });
+  wrap.addEventListener('focusout', event => { if (!wrap.contains(event.relatedTarget)) close(); });
   select.addEventListener('change', () => { active = select.selectedIndex; render(); });
   select.hidden = true;
   label.htmlFor = trigger.id;
